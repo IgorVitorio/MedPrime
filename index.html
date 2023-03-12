@@ -74,8 +74,8 @@
     <div class="container">
       <h1>Sua saúde,</h1>
       <br>
-      <h1>Nossa <b style="color: rgba(15, 2, 161, 0.815);">prioridade</b>.</h1> <br>
-      <h2 style="color: black;"><strong>Nós oferecemos uma ampla gama de serviços médicos para ajudá-lo(a) a se sentir melhor e manter um estilo de vida saudável.</strong> <br><br> <strong>Agende um serviço hoje mesmo e descubra como podemos ajudá-lo(a) a cuidar da sua saúde.</strong></h2><br><br>
+      <h1>Nossa <b style="color: rgb(3, 48, 153);">prioridade</b>.</h1> <br>
+      <h2 style="color: rgb(0, 0, 0);"><strong>Nós oferecemos uma ampla gama de serviços médicos para ajudá-lo(a) a se <b> sentir melhor e manter um estilo de vida saudável.</b></strong> <br><br> <strong>Agende um serviço hoje mesmo e descubra como podemos ajudá-lo(a) a cuidar da sua saúde.</strong></h2><br><br>
       <div class="text-center"><a href="#services" class="btn-get-started scrollto">Agendar um serviço</a></div>
     </div>
 
@@ -196,7 +196,7 @@
               <h4><a href="#appointment">Consulta</a></h4>
               <p style="font-size: 20px;" >Oferecemos consultas médicas com nossos profissionais altamente qualificados e experientes. Nossos médicos fornecerão um atendimento personalizado, examinando suas queixas de saúde e fazendo perguntas para ajudar a determinar o diagnóstico correto.</p> <br>
 
-              <a href="#appointment" class="btn btn-primary" style="font-size: 20px;">Agendar</a>
+              <a href="#appointment" class="btn btn-primary" style="font-size: 20px;"  onclick="selecionarOpcao1()">Agendar</a>
             </div>
           </div>
 
@@ -267,35 +267,73 @@
         </div>
 
         <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+
           <div class="row">
+
+            <div class="col-md-4 form-group">
+              <select name="department" id="department" class="form-select">
+                <option value="">Serviço</option>
+                <option value="consulta">Consulta</option>
+                <option value="lab">Exames laboratoriais</option>
+                <option value="tele">Telemedicina</option>
+                <option value="teste">Teste de Ancestralidade</option>
+                <option value="acessibilidade">Assistência de acessibilidade</option>
+                <option value="domiciliar">Assistência domiciliar</option>
+              </select>
+            </div>
+
             <div class="col-md-4 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Nome completo" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
+
+            <div class="col-md-4 form-group mt-3 mt-md-0 formcel">
               <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
               <div class="validate"></div>
             </div>
-            <div class="col-md-4 form-group mt-3 mt-md-0">
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-4 formcel">
               <input type="tel" class="form-control" name="phone" id="phone" placeholder="Celular" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
-          </div>
-          <div class="row">
+          
             <div class="col-md-4 form-group mt-3">
-              Data de marcação desejada
+              Selecione uma data
               <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Data desejada" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
+
+              <div class="col-md-4 form-group mt-3">
+                Selecione um Horário (aberto das 07:00 às 18:00):
+                <input type="time" name="time" 
+                min="07:00" max="18:00"
+                class="form-control datepicker" id="time" placeholder="Data desejada" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+          </div>  
+
+          <div class="row">
+
             <div class="col-md-4 form-group mt-3"><br>
               <select name="department" id="department" class="form-select">
                 <option value="">Departamento</option>
-                <option value="Department 1">Department 1</option>
-                <option value="Department 2">Department 2</option>
-                <option value="Department 3">Department 3</option>
+                <option value="Department 1">Clínica Geral</option>
+                <option value="Department 2">Pediatria</option>
+                <option value="Department 3">Ginecologia e Obstetrícia</option>
+                <option value="Department 4">Ginecologia e Obstetrícia</option>
+                <option value="Department 5">Cardiologia</option>
+                <option value="Department 6">Ortopedia</option>
+                <option value="Department 7">Oftalmologia</option>
+                <option value="Department 7">Neurologia</option>
+                <option value="Department 7">Dermatologia</option>
+                <option value="Department 7">Dermatologia</option>
               </select>
               <div class="validate"></div>
             </div>
+
             <div class="col-md-4 form-group mt-3"><br>
               <select name="doctor" id="doctor" class="form-select">
                 <option value="">Médico(a)</option>
@@ -305,17 +343,18 @@
               </select>
               <div class="validate"></div>
             </div>
-          </div>
 
-          <div class="form-group mt-3">
+           <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Messagem (Opcional)"></textarea>
             <div class="validate"></div>
           </div>
+
           <div class="mb-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
           </div>
+          
           <div class="text-center"><button class="bt-agendar" type="submit">Agendar agora</button></div>
         </form>
 

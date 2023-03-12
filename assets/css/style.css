@@ -470,7 +470,7 @@ h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background-image: url(../img/hero2-bg.jpg);
+  background-image: url(../img/about.jpg);
   background-size: cover;
   margin-bottom: -100px;
   margin-top: 40px;
@@ -478,8 +478,8 @@ h6 {
 
 #hero .container {
   position: relative;
-  background-color: #d8d8d884;
-  border-radius: 20px;
+  background-color: #d8d8d890;
+  border-radius: 30px;
   padding-top: 70px;
   padding-bottom: 20px;
 }
@@ -490,9 +490,8 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #032dac;
-  text-shadow: 1px 1px 1px #ffffff88;
-  text-align: center;
+  color: #1b42b5;
+  text-align: center; ;
 }
 
 #hero h2 {
@@ -534,6 +533,7 @@ h6 {
     height: 100vh;
     background-image: url(../img/pexels-antoni-shkraba-5215009.jpg);
     background-size: cover;
+    filter: brightness(100%); 
   }
 
   #hero .container {
@@ -541,12 +541,12 @@ h6 {
   }
 
   #hero h1 {
-    font-size: 28px;
+    font-size: 38px;
     line-height: 36px;
   }
 
   #hero h2 {
-    font-size: 18px;
+    font-size: 28px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -610,6 +610,11 @@ section {
   margin-bottom: 0;
 }
 
+@media (max-width: 992px) {
+  .formcel .formcel2{
+    margin-top: 0px;
+  }
+} 
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -679,7 +684,7 @@ section {
   background-color: #436f992b;
 }
 .why-us{
-  margin-top: -30px;
+  margin-top: 50px;
 }
 .why-us .content {
   padding: 30px;
