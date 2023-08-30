@@ -166,7 +166,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: #ffffff;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -189,7 +189,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #2c4964;
+  color: #2fc7c7;
 }
 
 #header .logo img {
@@ -351,11 +351,12 @@ h6 {
 */
 .mobile-nav-toggle {
   color: #0055ff;
-  font-size: 28px;
+  font-size: 40px;
   cursor: pointer;
   display: none;
   line-height: 0;
   transition: 0.5s;
+  margin-left: 140px;
 }
 
 .mobile-nav-toggle.bi-x {
@@ -469,19 +470,33 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 90vh;
-  background-image: url(../img/about.jpg);
-  background-size: cover;
+  height: 100vh;
   margin-bottom: -100px;
-  margin-top: 40px;
+  margin-top: 0px;
 }
 
+.custom-bg-blue {
+  background-color: #b5c8f5; /* Uma tonalidade de azul claro */
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+
+#hero .hero-img{
+  background-image: url(../img/about.jpg);
+  background-size: cover;
+  opacity: 80%;
+}
+
+#hero .hero-content{
+  padding-left: 0px;
+}
 #hero .container {
   position: relative;
   background-color: #d8d8d890;
-  border-radius: 30px;
-  padding-top: 70px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 100px;
 }
 
 #hero h1 {
@@ -500,21 +515,18 @@ h6 {
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+#hero .btn-primary {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 35px;
-  margin-top: 30px;
+  margin-top: 80px;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: 0.3s;
   color: #fff;
-  background: #29d462;
-  border: 2px solid green;
-  box-shadow: 5px 5px 15px black;
+  border: 1px solid green;
+  box-shadow: 5px 5px 10px black;
 }
 
 #hero .btn-get-started:hover {
@@ -527,28 +539,56 @@ h6 {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 993px) {
   #hero {
     margin-bottom: -10;
     height: 100vh;
     background-image: url(../img/pexels-antoni-shkraba-5215009.jpg);
     background-size: cover;
-    filter: brightness(100%); 
+    filter: brightness(90%); 
+  }
+  
+  #hero .hero-img{
+    background-image: url(../img/pexels-antoni-shkraba-5215009.jpg);
+    opacity: 100%;
   }
 
   #hero .container {
-    padding-bottom: 63px;
+    padding-bottom: 25px;
   }
 
   #hero h1 {
-    font-size: 38px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 20px;
   }
 
   #hero h2 {
-    font-size: 28px;
-    line-height: 24px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 16px;
+    margin-bottom: -50px;
+    margin-left: -40px;
+  }
+
+  #hero .btn-primary {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: 0.3s;
+    color: #fff;
+    border: 1px solid green;
+    box-shadow: 5px 5px 10px black;
+  }
+  #hero a{
+    padding: 0;
+    margin: 0;
+  }
+  #hero .col-md-6 .hero-content{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
 }
 
