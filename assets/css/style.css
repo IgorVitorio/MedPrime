@@ -974,6 +974,7 @@ section {
   position: relative;
   text-align: center;
   background: #fff;
+  white-space: nowrap;
 }
 
 .counts .count-box i {
@@ -1086,6 +1087,9 @@ section {
   color: #fff;
 }
 
+.services p{
+  text-align: justify;
+}
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
