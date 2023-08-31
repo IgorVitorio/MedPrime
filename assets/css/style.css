@@ -494,8 +494,9 @@ h6 {
 }
 #hero .container {
   position: relative;
-  background-color: #d8d8d890;
-  padding-top: 0px;
+  background-color: #b2e4e083;
+  margin-top: 80px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -728,7 +729,7 @@ section {
 }
 .why-us .content {
   padding: 30px;
-  background: #1977cc;
+  background: #1979ccbd;
   border-radius: 4px;
   color: #fff;
   box-shadow: 2px 2px 20px black;
@@ -758,7 +759,7 @@ section {
 }
 
 .why-us .content .more-btn:hover {
-  color: #1977cc;
+  color: #000000;
   background: #fff;
 }
 
